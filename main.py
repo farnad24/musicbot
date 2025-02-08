@@ -8,6 +8,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters
 TELEGRAM_BOT_TOKEN = "7939569062:AAFWnOhEENiZM7QCJWFj59vsojdPj5vxMoY"
 AUDIO_DATABASE_PATH = "/music"
 
+
 # تابع ایجاد اثر انگشت صوتی
 def create_fingerprint(audio_file_path):
     y, sr = librosa.load(audio_file_path)
