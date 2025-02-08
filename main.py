@@ -15,7 +15,6 @@ def create_fingerprint(audio_file_path):
     y, sr = librosa.load(audio_file_path)
     chroma = librosa.feature.chroma_stft(y=y, sr=sr)
     return np.mean(chroma, axis=1)  # میانگین Chroma Features
-
 # تابع مقایسه اثر انگشت صوتی
 def find_song_in_database(audio_file_path, database_path):
     query_fingerprint = create_fingerprint(audio_file_path)
